@@ -1,0 +1,88 @@
+$left: 200px;
+$leftColor: aqua;
+$rightColor: aquamarine;
+$boxWidth: 45%;
+$boxHeight: 400px;
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .box{
+    margin: 16px;
+    width: $boxWidth;
+    height: $boxHeight;
+  }
+
+  .box1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    .left {
+      width: $left;
+      background-color: $leftColor;
+    }
+
+    .right {
+      flex-grow: 1;
+      background-color: $rightColor;
+    }
+  }
+
+
+  .box2 {
+    position: relative;
+
+    .left{
+      width: $left;
+      height: 100%;
+      position:absolute;
+      left: 0;
+      background-color: $leftColor;
+    }
+
+    .right{
+      height: 100%;
+      margin-left: $left;
+      background-color: $rightColor;
+    }
+  }
+
+
+  .box3 {
+    .left{
+      width: $left;
+      height: 100%;
+      float: left;
+      background-color: $leftColor;
+    }
+
+    .right{
+      height: 100%;
+      margin-left: $left;
+      width: auto;
+      background-color: $rightColor;
+    }
+  }
+
+
+  .box4{
+    position: relative;
+    .left{
+      width: $left;
+      height: 100%;
+      background-color: $leftColor;
+    }
+
+    .right{
+      height: 100%;
+      position: absolute;
+      left: $left;
+      top:0;
+      bottom: 0;
+      right: 0;
+      background-color: $rightColor;
+    }
+  }
+}
